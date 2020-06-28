@@ -9,12 +9,22 @@
             var vm = this;
 
             vm.data = turtlesData;
+            vm.activeTurtle = {};
+            vm.changeActiveTurtle = changeActiveTurtle;
+
+
+            function changeActiveTurtle(index){
+                vm.activeTurtle = index;
+            }
+
+            vm.search = "";
         }
+
 
     var turtlesData = [
         {
             type: "Green Turtle",
-            image_url: "http://www.what-do-turtles-eat.com/wp-content/uploads/2014/10/Sea-Turtles-Habitat.jpg",
+            image_url: "https://s3.us-east-2.amazonaws.com/thehorse/cms/2013/02/horse-cut-out-for-interactive-horse.jpg",
             locations: "Tropical and subtropical oceans worldwide",
             size: "Up to 1.5m and up to 300kg",
             lifespan: "Over 80 years",
